@@ -85,9 +85,9 @@ Custom icons are used throughout the app, managed via font files.
 
 > ✏️ To add new icons:
 >
-> 1. Update `archive/config.json`
-> 2. Generate a new font via [fluttericon.com](https://www.fluttericon.com/)
-> 3. Replace the `.ttf` file and regenerate the Dart class if needed
+> 1. Upload `archive/config.json` to [fluttericon.com](https://www.fluttericon.com/)
+> 2. Add new icons and get a new font data
+> 3. Replace the files in project
 
 ---
 
