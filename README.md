@@ -1,16 +1,71 @@
-# architecture_template
+# 🏗️ Architecture Template
 
-Test architecture template
+A modular Flutter project template using FVM and Melos for scalable development.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Getting Started
 
-A few resources to get you started if this is your first Flutter project:
+To run this project, make sure you have the following tools installed:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [FVM (Flutter Version Management)](https://fvm.app/) – for managing Flutter versions
+- [Melos](https://melos.invertase.dev/) – for monorepo management
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 📦 Installation Steps
+
+### 1. Install FVM
+
+If you haven't installed FVM yet:
+
+```bash
+dart pub global activate fvm
+````
+
+Then set the required Flutter version for the project:
+
+```bash
+fvm use
+```
+
+### 2. Install Melos
+
+Melos helps manage packages in a monorepo:
+
+```bash
+dart pub global activate melos
+```
+
+### 3. Bootstrap the Project
+
+Install all dependencies and link local packages:
+
+```bash
+melos bootstrap
+```
+
+---
+
+## 🧪 Run the Project
+
+Use FVM to run the Flutter app:
+
+```bash
+fvm flutter run
+```
+
+> 💡 Make sure you're inside the correct package directory when running the app.
+
+---
+
+## 🛠️ Common Commands
+
+```bash
+fvm flutter pub get       # Install Flutter dependencies
+melos bs           # Set up monorepo packages
+melos run <command>       # Run custom Melos scripts
+```
+
+---
+
