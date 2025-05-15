@@ -1,6 +1,6 @@
 # 🏗️ Architecture Template
 
-A modular Flutter project template using FVM and Melos for scalable development.
+Project for use https://rawg.io/apidocs for mobile APP
 
 ---
 
