@@ -162,6 +162,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  games_feature:
+    dependency: "direct main"
+    description:
+      path: "packages/games_feature"
+      relative: true
+    source: path
+    version: "0.0.1"
   get_it:
     dependency: "direct main"
     description:

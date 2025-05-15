@@ -1,24 +1,22 @@
-name: api_adapter
+name: games_feature
 description: "A new Flutter project."
 version: 0.0.1
 publish_to: none
 
 environment:
   sdk: ^3.7.2
-  flutter: ">=3.30.0-0.1.pre"
+  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  dio: 5.8.0+1
-
+  api_adapter:
+    path: ../api_adapter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: 5.0.0
-
-
+  flutter_lints: ^5.0.0
 
 flutter:

@@ -37,6 +37,8 @@ dependencies:
 
   api_adapter:
     path: packages/api_adapter
+  games_feature:
+    path: packages/games_feature
 
 dev_dependencies:
   flutter_test:
