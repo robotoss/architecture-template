@@ -9,15 +9,17 @@ class BaseHomePage extends StatelessWidget {
   // The widget to display in the body of the Scaffold.
   final Widget child;
 
+  final IconData gamesIcon = Icons.games_outlined;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: child,
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items:  <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'A Screen',
+            icon: Icon(gamesIcon),
+            label: 'Games',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
@@ -36,7 +38,7 @@ class BaseHomePage extends StatelessWidget {
 
   static int _calculateSelectedIndex(BuildContext context) {
     final String location = GoRouterState.of(context).uri.path;
-    if (location.startsWith('/a')) {
+    if (location.startsWith('/games')) {
       return 0;
     }
     if (location.startsWith('/b')) {
@@ -51,7 +53,7 @@ class BaseHomePage extends StatelessWidget {
   void _onItemTapped(int index, BuildContext context) {
     switch (index) {
       case 0:
-        GoRouter.of(context).go('/a');
+        GoRouter.of(context).go('/games');
       case 1:
         GoRouter.of(context).go('/b');
       case 2:

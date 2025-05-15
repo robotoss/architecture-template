@@ -1,5 +1,6 @@
-import 'package:architecture_template/features/home_feature/presentation/ui/app_home_page.dart';
-import 'package:architecture_template/features/splash_feature/presentation/ui/splash_page.dart';
+import 'package:architecture_template/features/games/presentation/ui/app_games_page.dart';
+import 'package:architecture_template/features/home/presentation/ui/app_home_page.dart';
+import 'package:architecture_template/features/splash/presentation/ui/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -11,7 +12,7 @@ class AppRouting {
 
   // GoRouter configuration
   late final config = GoRouter(
-    initialLocation: '/a',
+    initialLocation: '/games',
     routes: [
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
@@ -21,11 +22,9 @@ class AppRouting {
         routes: <RouteBase>[
           /// The first screen to display in the bottom navigation bar.
           GoRoute(
-            path: '/a',
+            path: '/games',
             builder: (BuildContext context, GoRouterState state) {
-              return Scaffold(
-                appBar: AppBar(title: const Text('A'),),
-              );
+              return const AppGamesPage();
             },
           ),
 
