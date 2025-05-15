@@ -3,7 +3,6 @@ import 'package:architecture_template/core/routing/app_routing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get_it/get_it.dart';
-import 'package:riverpod/riverpod.dart';
 
 void main() {
   /// Init main DI
