@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import 'app_state_notifiers.dart';
+
 final appRoutingProvider = Provider((ref) => AppRouting());
 
 class AppRouting {
@@ -13,6 +15,7 @@ class AppRouting {
   // GoRouter configuration
   late final config = GoRouter(
     initialLocation: '/games',
+    refreshListenable: Listenable.merge([isAppInitialized]),
     routes: [
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
@@ -55,5 +58,12 @@ class AppRouting {
         builder: (context, state) => const SplashPage(),
       ),
     ],
+    redirect: (BuildContext context, GoRouterState state) {
+      if (!isAppInitialized.value) {
+        return '/splash_page';
+      } else {
+        return null;
+      }
+    },
   );
 }
